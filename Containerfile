@@ -16,5 +16,6 @@ LABEL org.opencontainers.image.source="https://github.com/Containerpak/brave"
 
 COPY --from=source /out/ /
 
-RUN rm -f /opt/brave.com/brave/chrome-sandbox && \
+RUN ln -s /opt/brave.com/brave/brave-browser /usr/bin/brave-browser && \
+    rm -f /opt/brave.com/brave/chrome-sandbox && \
     cpak-clean-junk
