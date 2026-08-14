@@ -10,7 +10,7 @@ RUN apt-get update && \
     echo "${BRAVE_SHA256}  /tmp/brave.deb" | sha256sum --check && \
     dpkg-deb --extract /tmp/brave.deb /out
 
-FROM ghcr.io/containerpak/mesa:main
+FROM ghcr.io/containerpak/gtk3:main
 
 LABEL org.opencontainers.image.source="https://github.com/Containerpak/brave"
 
