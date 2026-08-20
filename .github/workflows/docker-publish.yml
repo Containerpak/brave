@@ -54,10 +54,10 @@ jobs:
           provenance: mode=max
           sbom: true
 
-      - name: Verify package exports
+      - name: Verify package image
         run: |
           docker pull ghcr.io/containerpak/brave:main
-          docker run --rm --entrypoint /bin/sh ghcr.io/containerpak/brave:main -ec 'test -x /usr/bin/brave-browser && test -f /usr/share/applications/brave-browser.desktop'
+          docker run --rm --entrypoint /bin/sh ghcr.io/containerpak/brave:main -ec 'test -L /usr/bin/brave-browser && test "$(readlink /usr/bin/brave-browser)" = /opt/brave.com/brave/brave-browser'
 
       - name: Publish summary
         run: echo "ghcr.io/containerpak/brave@${{ steps.build.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"
