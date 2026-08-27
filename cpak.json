@@ -1,10 +1,10 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Brave",
   "description": "Fast browser with privacy protections.",
   "version": "1.93.138",
-  "image": "ghcr.io/containerpak/brave:main",
+  "image": "ghcr.io/containerpak/brave@sha256:1aed50de8406fc38fdddb18ead4107e8305d170e49e97d5e60cfe1983f7ca5ab",
   "runtime_sources": [
     {
       "name": "brave-browser_1.93.138_amd64.deb",
@@ -14,22 +14,21 @@
       "installer": "deb-extract"
     }
   ],
-  "binaries": ["/usr/bin/brave-browser"],
-  "desktop_entries": ["/usr/share/applications/brave-browser.desktop"],
+  "binaries": [
+    "/usr/bin/brave-browser"
+  ],
+  "desktop_entries": [
+    "/usr/share/applications/brave-browser.desktop"
+  ],
   "dependencies": [],
   "addons": [],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": true,
-    "socketSessionBus": true,
-    "socketSystemBus": false,
     "socketSshAgent": false,
     "socketCups": true,
     "socketGpgAgent": false,
-    "socketAtSpiBus": true,
-    "socketBluetooth": true,
     "deviceDri": true,
     "deviceKvm": false,
     "deviceShm": true,
@@ -41,7 +40,12 @@
     "deviceAll": false,
     "notification": true,
     "openURI": false,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -49,7 +53,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
