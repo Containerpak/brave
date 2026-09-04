@@ -4,7 +4,7 @@
   "name": "Brave",
   "description": "Fast browser with privacy protections.",
   "version": "1.94.119",
-  "image": "ghcr.io/containerpak/brave@sha256:5696c82bdadab412350353c62e116b4075e5567ff5edab0876d4c4b5f407daf6",
+  "image": "ghcr.io/containerpak/brave@sha256:83d0653b99b755e67046dfb463078e68afa86d78bf4a2a336de145d4da4ee199",
   "runtime_sources": [
     {
       "name": "brave-browser_1.94.119_amd64.deb",
