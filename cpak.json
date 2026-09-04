@@ -24,7 +24,7 @@
   "addons": [],
   "idle_time": 0,
   "override": {
-    "displayX11": false,
+    "displayX11": true,
     "socketWayland": true,
     "socketPulseAudio": true,
     "socketSshAgent": false,
