@@ -3,14 +3,14 @@
   "manifest_version": "3.0",
   "name": "Brave",
   "description": "Fast browser with privacy protections.",
-  "version": "1.94.121",
+  "version": "1.95.101",
   "image": "ghcr.io/containerpak/brave@sha256:480d4b28a7b472c5b69140a76f7ea16ccc007c85466e512882f98c8dba9d587c",
   "runtime_sources": [
     {
-      "name": "brave-browser_1.94.121_amd64.deb",
-      "url": "https://brave-browser-apt-release.s3.brave.com/pool/main/b/brave-browser/brave-browser_1.94.121_amd64.deb",
-      "sha256": "21d7ac36b64a408dc598bb6ec3db84b07b2cbca854d26b28055a2fb5b94a2e77",
-      "size": 148013744,
+      "name": "brave-browser_1.95.101_amd64.deb",
+      "url": "https://brave-browser-apt-release.s3.brave.com/pool/main/b/brave-browser/brave-browser_1.95.101_amd64.deb",
+      "sha256": "7c41a55820117d93b821e55e55defb5f6cae8a86115c88f3a1026cd27f1c73cc",
+      "size": 148613736,
       "installer": "deb-extract"
     }
   ],
